@@ -1,0 +1,443 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 60px;
+  background-color: #05080f;
+  padding: 5px;
+  z-index: 3;
+}
+nav img {
+  width: 76px;
+}
+nav #ul1 li {
+  margin-left: 15px;
+  display: inline-block;
+  position: relative;
+}
+nav #ul1 li a {
+  list-style: none;
+  text-decoration: none;
+  color: #ff5b65;
+}
+nav #ul1 li::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #2890dc;
+  transition: 0.3s;
+}
+
+nav #ul1 li:hover::before {
+  width: 100%;
+}
+nav #ul1 li a:hover,
+#nav2 ul li:hover {
+  color: #d7d7d9;
+}
+#btn0 {
+  border: none;
+  background-color: transparent;
+}
+#btn,
+#btn2 {
+  padding: 10px 30px;
+  color: white;
+  margin: 4px;
+  border: none;
+  background-color: #d60427;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#btn:hover,
+#btn2:hover {
+  box-shadow: none;
+}
+#nav2 {
+  position: fixed;
+  background-color: #05080f;
+  height: 100%;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  display: none;
+}
+#nav2 h1 {
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+  color: aliceblue;
+}
+#nav2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#nav2 div ul li {
+  margin-bottom: 19px;
+  position: relative;
+  left: -7px;
+}
+
+#nav2 ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+#nav2 ul li a:hover {
+  color: #ff5b65;
+}
+
+/*  body */
+
+#body {
+  background-image: url("car2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90%;
+  position: relative;
+  perspective: 900px;
+}
+
+#body #div0 h1 {
+  color: transparent;
+  font-size: 67px;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 800;
+  background: url("back.png");
+  -webkit-background-clip: text;
+  animation: back 10s linear infinite;
+  background-position: 0 0;
+}
+@keyframes back {
+  100% {
+    background-position: 500px 0;
+  }
+}
+#body #div0 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 8%;
+}
+#body #div1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  bottom: 23%;
+  height: 90%;
+}
+#body span {
+  position: absolute;
+  bottom: 10px;
+  color: #b2b8c8;
+  font-size: 40px;
+  transform: rotateX(58deg);
+  font-weight: 800;
+}
+
+/*section*/
+section {
+  margin-top: 50px;
+}
+section h1 {
+  text-align: center;
+  color: #ff545c;
+  font-weight: 900;
+  font-size: 35px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+section #service {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 10px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+section #service div {
+  width: 330px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+section #service div img {
+  height: 200px;
+  width: 100%;
+}
+
+section #service div p {
+  color: #303948;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: not-allowed;
+}
+
+section #service div button {
+  padding: 8px 40px;
+  border: none;
+  background-color: #006cf2;
+  color: white;
+  border-radius: 10px /10px;
+}
+section #service div button:hover {
+  background-color: #06b5ff;
+}
+section #cars .div {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+#div00 {
+  flex-wrap: wrap;
+}
+#div01 {
+  flex-wrap: wrap-reverse;
+}
+#div02 {
+  flex-wrap: wrap;
+}
+#div03 {
+  flex-wrap: wrap-reverse;
+}
+
+.car {
+  width: 500px;
+  height: 300px;
+  transition: 0.7s;
+}
+
+.info {
+  width: 500px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  color: #636569;
+}
+.info h3 {
+  color: #970e16;
+  text-decoration: underline;
+}
+#car1 {
+  background-image: url("cars/car1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#car2 {
+  background-image: url("cars/car2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#car3 {
+  background-image: url("cars/car3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#car4 {
+  background-image: url("cars/car4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#car1:hover,
+#car2:hover,
+#car3:hover,
+#car4:hover {
+  background-size: 150%;
+}
+/*Bup*/
+
+#bup {
+  width: 100%;
+  /*background-color: #05080f;*/
+  background-image: radial-gradient(#bd141f 0%, #05080f 70%);
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 27px 0px;
+  z-index: 1;
+}
+#bup div {
+  width: 445px;
+  height: 250px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+#bup div .img {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+#bup div .img2 {
+  z-index: 0;
+  width: 130px;
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  transform: rotate(-38deg);
+}
+#electric {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+#electric h1 {
+  color: transparent;
+  font-size: 35px;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 800;
+  background: url("back.png");
+  -webkit-background-clip: text;
+  animation: back 10s linear infinite;
+  background-position: 0 0;
+}
+#electric button {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 7px 15px;
+}
+.h11 {
+  text-align: center;
+  color: #ff545c;
+  cursor: pointer;
+}
+#INFO {
+  margin: auto;
+  width: 80%;
+  font-style: oblique;
+  margin-bottom: 80px;
+}
+#INFO p,
+#read {
+  font-weight: 400;
+  font-size: 20px;
+}
+#INFO p img {
+  float: left;
+}
+#INFO p #B {
+  color: #d60427;
+  text-decoration: underline;
+}
+#read {
+  display: none;
+}
+#statu {
+  color: #006cf2;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+/*footer*/
+footer {
+  width: 100%;
+  background-image: radial-gradient(#006cf2 0%, #05080f 70%);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 30px 0px;
+}
+footer div {
+  width: 300px;
+  margin-bottom: 23px;
+}
+footer div span {
+  text-decoration: underline;
+  color: #d60427;
+}
+footer div h2 {
+  color: transparent;
+  font-size: 25px;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 800;
+  background: url("back.png");
+  -webkit-background-clip: text;
+  animation: back 10s linear infinite;
+  background-position: 0 0;
+}
+footer div ul {
+  display: flex;
+  justify-content: center;
+}
+footer div ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+footer div ul li a {
+  text-decoration: none;
+  color: white;
+}
+i {
+  color: white;
+  font-size: 28px;
+}
+/*media*/
+@media only screen and (max-width: 600px) {
+  #btn,
+  #ul1 {
+    display: none;
+  }
+  #body span {
+    font-size: 27px;
+  }
+  #INFO p img {
+    width: 100px;
+  }
+  /*
+  section #cars .div {
+    display: block;
+  }
+  .info,
+  .car {
+    width: 100%;
+  }*/
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: #05080f;
+  cursor: copy;
+}
+::-moz-selection {
+  color: rgb(255, 255, 255);
+  background: #05080f;
+  cursor: copy;
+}
